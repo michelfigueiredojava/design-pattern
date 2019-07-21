@@ -1,6 +1,5 @@
 package com.michelfigueiredo.designpattern.factory.polygon;
 
-import com.michelfigueiredo.designpattern.factory.polygon.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,27 +12,31 @@ import static org.hamcrest.MatcherAssert.assertThat;
 class PolygonTest {
 
     PolygonFactory polygonFactory;
+
     @BeforeEach
     void setUp() {
         polygonFactory = new PolygonFactory();
     }
 
-    @Test void
+    @Test
+    void
     can_create_pentagon() {
-        Polygon polygon = polygonFactory.getPolygon( 5 );
-        assertThat( polygon, instanceOf( Pentagon.class ) );
+        Polygon polygon = polygonFactory.getPolygon(5);
+        assertThat(polygon, instanceOf(Pentagon.class));
     }
 
-    @Test void
+    @Test
+    void
     can_create_triangle() {
-        Polygon polygon = polygonFactory.getPolygon( 3);
-        assertThat( polygon, instanceOf( Triangle.class ) );
+        Polygon polygon = polygonFactory.getPolygon(3);
+        assertThat(polygon, instanceOf(Triangle.class));
     }
 
-    @Test void
+    @Test
+    void
     can_create_square() {
-        Polygon polygon = polygonFactory.getPolygon( 4 );
-        assertThat( polygon, instanceOf( Square.class ) );
+        Polygon polygon = polygonFactory.getPolygon(4);
+        assertThat(polygon, instanceOf(Square.class));
     }
 
 
